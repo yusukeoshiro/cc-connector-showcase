@@ -1,0 +1,36 @@
+{
+  "hooks": [
+    {
+      "name": "app.account.created",
+      "script": "~/cartridge/scripts/hooks/account"
+    },
+    {
+      "name": "app.account.updated",
+      "script": "~/cartridge/scripts/hooks/account"
+    },
+    {
+      "name": "app.order.created",
+      "script": "~/cartridge/scripts/hooks/customerOrder"
+    },
+    {
+      "name": "app.order.updated",
+      "script": "~/cartridge/scripts/hooks/customerOrder"
+    },    
+    {
+      "name": "app.case.created",
+      "script": "~/cartridge/scripts/hooks/case"
+    },   
+    {
+      "name": "app.case.updated",
+      "script": "~/cartridge/scripts/hooks/case"
+    },   
+    {
+      "name": "app.case.get",
+      "script": "~/cartridge/scripts/hooks/case"
+    },   
+    {
+      "name": "app.case.getAll",
+      "script": "~/cartridge/scripts/hooks/case"
+    }                   
+  ]
+}
