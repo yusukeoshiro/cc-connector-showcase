@@ -103,6 +103,6 @@ try{
 <iscomment>Gather device-aware scripts</iscomment>
 <isinclude url="${URLUtils.url('Home-SetLayout')}"/>
 <isscript>
-    var hookHelper = require('mc_controllers/cartridge/scripts/template/hookHelper');
+    var hookHelper = require('*/cartridge/scripts/template/hookHelper');
     hookHelper.callHook('app.template.htmlHead', null, {pdict: pdict});
 </isscript>

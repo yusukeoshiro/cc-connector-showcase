@@ -39,6 +39,6 @@ var meta = "${pdict.CurrentPageMetaData.description}";
 var keywords = "${pdict.CurrentPageMetaData.keywords}";
 </script>
 <isscript>
-    var hookHelper = require('mc_controllers/cartridge/scripts/template/hookHelper');
+    var hookHelper = require('*/cartridge/scripts/template/hookHelper');
     hookHelper.callHook('app.template.afterFooter', null, {pdict: pdict});
 </isscript>
