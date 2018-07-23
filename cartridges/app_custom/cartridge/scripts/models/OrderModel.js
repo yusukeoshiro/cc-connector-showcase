@@ -110,6 +110,21 @@ OrderModel.submit = function (order) {
         }
     }
 
+    /**
+     * @type {dw.system.HookMgr}
+     */
+    var hookID = 'app.order.created';
+    if (HookMgr.hasHook(hookID)) {
+        HookMgr.callHook(
+            hookID,
+            hookID.slice(hookID.lastIndexOf('.') + 1),
+            order
+        );
+    } else {
+        require('dw/system/Logger').debug('no hook registered for {0}', hookID);
+    }
+
+
     return {
         Order: order,
         order_created: true
