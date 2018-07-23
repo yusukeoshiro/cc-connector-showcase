@@ -6597,6 +6597,41 @@ h1 .account-logout {
   .pt_order-confirmation #navigation {
     display: none; } }
 
+.mc-recommendation {
+  clear: both; }
+  @media screen and (min-width: 768px) {
+    .mc-recommendation .igo_boxbody {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center; } }
+  @media screen and (max-width: 768px) {
+    .mc-recommendation .igo_boxbody {
+      display: block; } }
+  .mc-recommendation .igo_product {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: center; }
+    @media screen and (max-width: 768px) {
+      .mc-recommendation .igo_product {
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+        -ms-flex-pack: center;
+            justify-content: center;
+        -ms-flex-align: center;
+            align-items: center;
+        margin-bottom: 7%; } }
+  @media screen and (min-width: 768px) {
+    .mc-recommendation .igo_product_image {
+      width: 60%; } }
+  @media screen and (max-width: 768px) {
+    .mc-recommendation .igo_product_image {
+      width: 40%; } }
+
 #home-bottom-center .home-bottom-center-text {
   top: 9%; }
   #home-bottom-center .home-bottom-center-text h1 {

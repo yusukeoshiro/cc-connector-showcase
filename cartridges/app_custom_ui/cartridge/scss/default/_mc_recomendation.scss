@@ -1,0 +1,38 @@
+.mc-recommendation {
+    clear: both;
+
+    .igo_boxbody {
+        @media screen and (min-width: 768px) {
+            display: flex;
+            justify-content: center;
+        }
+
+        @media screen and (max-width: 768px) {
+            display: block;
+        }
+    }
+
+    .igo_product {
+        display: flex;
+        flex-direction : column;
+        flex-wrap: wrap;
+        text-align:center;
+
+        @media screen and (max-width: 768px) {
+            flex-direction : column-reverse;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 7%;
+        }
+    }
+
+    .igo_product_image {
+        @media screen and (min-width: 768px) {
+            width: 60%;
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 40%;
+        }
+    }
+}
