@@ -10,8 +10,8 @@
 var Status = require('dw/system/Status');
 
 /* Script Modules */
-var app = require('*/cartridge/scripts/app');
-var guard = require('*/cartridge/scripts/guard');
+var app = require('storefront_controllers/cartridge/scripts/app');
+var guard = require('storefront_controllers/cartridge/scripts/guard');
 
 
 /**
