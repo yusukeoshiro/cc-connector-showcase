@@ -1,0 +1,155 @@
+.product-tile {
+	@extend %clearfix;
+	color: $nobel;
+	position: relative;
+	text-align: center;
+	background: $white;
+	padding: 40px 10px 50px;
+	img {
+		max-width: 100%;
+		vertical-align: bottom;
+	}
+	.product-image {
+		position: relative;
+	}
+	.quickview {
+		display: none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 55%;//For IE
+		width: max-content;
+		max-width: 75%;
+		padding: 0.5em;
+		background-color: rgba($blue, 0.8);
+		color: #fff;
+		i {
+			margin-left: 0.5em;
+		}
+	}
+	.product-image:hover .quickview {
+		display: block;
+	}
+	.product-name {
+		height: 3em;
+		margin-top: 15px;
+		font-size: 1.2em;
+		font-weight: 700;
+		a { color: $black; }
+		a:hover { color: $blue1; }
+	}
+	.product-price,
+	.product-pricing {
+		font-size: 1.2em;
+		color: $blue1;
+	}
+	.price-standard,
+	.product-standard-price {
+		text-decoration: line-through;
+		color: $grey4;
+	}
+	.grid-tile & .product-swatches {
+		float: right;
+	}
+	.product-swatches-all {
+		cursor: pointer;
+		font-size: 0.9em;
+	}
+	.product-swatches {
+		ul {
+			list-style: none;
+			margin: 0;
+			overflow: hidden;
+			padding: 0;
+			&.swatch-toggle {
+				background: $white;
+				display: none;
+				position: absolute;
+			}
+		}
+		display: none;
+
+		.pt_product-search-result &, .pt_product-compare & {
+   			display: block;
+   		}
+
+		&:hover ul.swatch-toggle {
+			display: block;
+		}
+		li {
+			float: left;
+		}
+		.swatch {
+			display: block;
+			width: 16px;
+			img {
+				border: 1px solid $white;
+				height: 12px;
+				padding: 1px;
+				width: 12px;
+			}
+		}
+		.selected img, img:hover {
+			border-color: $blue1;
+		}
+	}
+	.product-promo {
+		font-size: 0.8em;
+		margin: 0.5em 0;
+		text-transform: uppercase;
+	}
+	.product-compare {
+		.field-wrapper {
+			display: inline-block;
+			float: none;
+		}
+		input {
+			margin: 0;
+		}
+	}
+	.product-review {
+		margin-bottom: 1em;
+		.rating-title {
+			display: inline-block;
+			margin-right: 1em;
+		}
+		.rating {
+			display: inline-block;
+		}
+	}
+	.wide-tiles & {
+		height: auto !important; // overwrite synced heights set on element
+		padding: 20px 10px;
+		.product-image {
+			float: left;
+			padding-right: 2em;
+		}
+		.product-name,
+		.product-pricing,
+		.product-promo,
+		.product-swatches,
+		.product-review,
+		.product-compare {
+			float: left;
+			text-align: left;
+			width: 65%;
+		}
+		.product-name {
+			font-size: 1.5em;
+			height: auto;
+			margin-top: 0;
+		}
+		.product-pricing {
+			font-size: 1.3em;
+		}
+		.product-swatches {
+			margin-bottom: 1em;
+		}
+	}
+}
+
+.capture-product-id {
+	left: -999em;
+	position: absolute;
+}

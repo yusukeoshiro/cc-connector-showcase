@@ -1,0 +1,188 @@
+// Order History - Order Details Styling
+
+.order-history-header {
+    background: $grey7;
+    overflow: hidden;
+    padding: 10px;
+    .label {
+        font-weight: 700;
+    }
+    button {
+        float: right;
+    }
+    .order-date, .order-status, .order-number {
+        float: left;
+        margin: 2px 0;
+        width: 60%;
+    }
+}
+.order-history-items {
+    margin: 20px 0;
+    .order-history-table {
+        th, td {
+            padding: 5px 10px;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style-position: inside;
+            list-style-type: square;
+        }
+        .order-shipped-to,
+        .order-items,
+        .order-total-price {
+            width: 33%;
+        }
+        .toggle {
+            cursor: pointer;
+            display: block;
+        }
+    }
+}
+.js .order-history-table .hidden {
+    display: none;
+}
+
+// Details Styling
+
+.orderdetails {
+    h2 {
+        clear: both;
+    }
+    .label {
+        font-weight: bold;
+        margin-bottom: .3rem;
+        margin-top: .3rem;
+        text-transform: uppercase;
+    }
+    .order-shipment-table {
+        background-color: $grey7;
+        padding: 1em;
+    }
+
+	@media screen and (min-width: 768px){
+		// align with PAYMENT TOTAL above
+		.order-shipment-details {
+			.order-shipment-address {
+				float: right;
+				width: 300px;
+				margin-right: -1rem;
+				padding: 0 0.3rem;
+				box-sizing: border-box;
+			}
+		}
+    }
+    .line-items {
+        clear: both;
+        padding-top: 1rem;
+        .line-item {
+            padding-bottom: 1rem;
+            .line-item-details,
+            .line-item-quantity,
+            .line-item-price {
+                display: inline-block;
+                vertical-align: top;
+            }
+            .line-item-quantity,
+            .line-item-price {
+                width: 14%;
+            }
+            .line-item-details {
+                width: 70%;
+                a {
+                    font-size: 1.1rem;
+                }
+            }
+            .line-item-quantity {
+                text-align: center;
+            }
+            .line-item-price {
+                text-align: right;
+            }
+        }
+    }
+    .order-payment-summary {
+        @media screen and (min-width: 480px) {
+            float: right;
+			width: 300px;
+        }
+    }
+    .order-information {
+        padding-bottom: .5em;
+        padding-top: .5em;
+        .label {
+            color: $nobel;
+            font-weight: 300;
+            text-transform: none;
+        }
+        .value {
+            font-weight: 700;
+        }
+        .order-number {
+            font-size: 1.75rem;
+        }
+    }
+    .payment-amount {
+        .label {
+            font-weight: normal;
+            text-transform: none;
+        }
+    }
+    .order-totals-table td {
+        &:first-child {
+            padding-right: 5rem;
+            text-align: left;
+        }
+    }
+}
+.pt_order,
+.confirmation {
+    .actions {
+		clear: both;
+        padding: 20px 0;
+        a {
+            margin-right: 2rem;
+        }
+    }
+}
+.confirmation-message {
+    padding: 20px 30px;
+}
+.confirmation {
+
+	.login-create-account,
+	.order-confirmation-details {
+		padding: 0 30px;
+	}
+    &.create-account {
+        .login-box-content {
+            background-color: $grey7;
+            padding: 15px;
+            p {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            .form-row {
+                margin: 0;
+            }
+        }
+		@media screen and (min-width: 768px) {
+			overflow: hidden;
+			.login-create-account,
+			.order-confirmation-details {
+				float: left;
+				box-sizing: border-box;
+			}
+			.login-create-account {
+				width: 25%;
+				padding: 0 20px 0 0;
+			}
+			.order-confirmation-details {
+				width: 75%;
+				padding: 0 30px;
+			}
+		}
+    }
+}

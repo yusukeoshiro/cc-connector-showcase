@@ -1,0 +1,259 @@
+.pt_product-search-result .primary-content .slot-grid-header {
+	// to avoid overriding categoryproducthits template
+	// that causes compare feature bug for some reason
+	display: none;
+}
+
+.pt_product-search-result .primary-content h1.content-header {
+    padding-left: 15px;
+}
+
+.pt_content-search-result,
+.pt_product-search-noresult {
+    .primary-content {
+        > h1, 
+        > h2,
+        > p {
+            margin: 0;
+            padding: .1em 1%;
+        }
+        .no-hits-help,
+        .no-hits-search,
+        .no-hits-footer {
+            padding: .1em 1%;
+        }
+        .pagination {
+            float: none;
+            padding: .1em 1%;
+        }
+    }
+}
+
+.category-main-banner img {
+    max-width: 100%;
+}
+
+.no-hits-search-term,
+.no-hits-search-term-suggest {
+    color: $sangria;
+    font-style: italic;
+}
+
+.no-hits-footer {
+    margin: 20px 0;
+    padding: 20px 0;
+}
+
+.search-result-bookmarks {
+    margin: 15px;
+    .first {
+        border-right: 1px solid $nobel;
+        padding-right: 5px;
+    }
+}
+
+.search-result-options {
+    padding: 1em 0.5em;
+    overflow: hidden;
+    .sort-by {
+		float: left;
+    }
+    .items-per-page {
+        float: left;
+        margin-right: .5em;
+    }
+    form {
+        margin-bottom: 0;
+    }
+    label {
+        display: none;
+    }
+    select {
+        border: 1px solid $gainsboro;
+        border-radius: 5px;
+        color: $dim-gray;
+        padding: .5em;
+    }
+    .pagination {
+        .results-hits {
+            color: $dim-gray;
+            float: left;
+            display: none;
+        }
+        ul {
+            float: right;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            float: left;
+			list-style: none;
+            a,
+            &.current-page,
+            i {
+                display: inline-block;
+                text-align: center;
+            }
+        }
+    }
+}
+.search-result-items {
+    padding: 0;
+    li {
+        list-style: none;
+    }
+    .invisible {
+        display: none;
+    }
+}
+.tiles-container {
+    margin: 0 -20px;
+	font-size: 0;
+    .grid-tile {
+		display: inline-block;
+		vertical-align: top;
+        width: (100% / 3);
+		padding: 20px;
+		box-sizing: border-box;
+		font-size: 14px;
+    }
+}
+
+.search-result-content {
+    clear: both;
+    .product-price {
+        .price-standard {
+            color: $grey4;
+            font-weight: 100;
+            text-decoration: line-through;
+        }
+    }
+}
+
+#results-content {
+    padding-top: 30px;
+}
+
+.folder-content-list {
+    align-items: stretch;
+    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+    padding: .5em 1%;
+    li {
+        background-color: $white-smoke;
+        border: 1px solid $very-light-gray;
+        flex-basis: 100%;
+        flex-grow: 1;
+        list-style-type: none;
+        margin: .25rem;
+        padding: 1rem;
+        @media screen and (min-width: 480px) {
+            flex-basis: 40%;
+        }
+    }
+    p {
+        line-height: 1.1rem;
+    }
+    .content-title {
+        display: block;
+        font-size: 1.2em;
+    }
+    .readmore {
+        font-style: italic;
+        padding-left: .3rem;
+    }
+}
+
+.no-results {
+    padding: 20px;
+}
+
+.toggle-grid {
+    float: left;
+    margin-right: 0.5em;
+    i {
+        cursor: pointer;
+        margin-right: 0.3em;
+    }
+    [data-option="column"] {
+        color: $blue2;
+    }
+    &.wide {
+        [data-option="wide"] {
+            color: $blue2;
+        }
+        [data-option="column"] {
+            color: $grey2;
+        }
+    }
+}
+
+.wide-tiles {
+    .search-result-items .grid-tile {
+        width: 91%;
+    }
+    .product-tile {
+        .product-swatches {
+            bottom: auto;
+            left: auto;
+            position: relative;
+            right: auto;
+            margin-top: 5px;
+            li {
+                float: left;
+            }
+        }
+    }
+}
+
+
+// Responsive styling
+@media screen and (max-width: 767px) {
+	.search-result-options {
+		max-width: none;
+		padding: 10px 20px 20px;
+		margin: -20px -30px 20px;
+		background: $grey7;
+		.sort-by {
+			margin: 0 0 10px;
+		}
+		.items-per-page {
+			display: none;
+		}
+		.pagination {
+			float: left;
+			.results-hits {
+				display: none;
+			}
+			a,
+			.current-page,
+			i {
+				width: 32px;
+				line-height: 32px;
+
+			}
+			ul {
+				border: 1px solid $grey5;
+				border-right: 0;
+			}
+			li {
+				border-right: 1px solid $grey5;
+			}
+		}
+	}
+}
+@media screen and (min-width: 768px) {
+	.search-result-options {
+		.sort-by {
+			margin-right: .5em;
+		}
+		.pagination {
+			float: right;
+			padding-top: .8em;
+			li {
+				padding: 0 .5em;
+			}
+		}
+	}
+}

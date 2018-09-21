@@ -1,0 +1,82 @@
+<iscontent type="text/html " charset="UTF-8"/>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<iscomment>The "subject" tag contains the mail subject and can contain dynamic information, like the order number.</iscomment>
+<subject><isif condition="${!empty(pdict.MailSubject)}">${pdict.MailSubject}<iselse/><isprint value="${Resource.msg('order.orderconfirmation-email.001','order',null)}" encoding="off"/> <isprint value="${pdict.Order.orderNo}"/></isif></subject>
+<iscomment>
+	The "to" tag contains the email address of the recipient, the "from" tag the email address of the sender. 
+	Each tag is to be specified max. once. Multiple email address can be separated by "," (see RFC2822).
+</iscomment>
+<to>${pdict.Order.customerEmail}</to>
+<from>${dw.system.Site.getCurrent().getCustomPreferenceValue('customerServiceEmail')}</from>
+
+<head>
+
+<isinclude template="util/modules"/>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;">
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%" height="100%">
+<tbody>
+<tr>
+<td style="width: 33%;"> <br />
+</td>
+<td style="width: 33%;">
+
+<table cellspacing="0" cellpadding="5px" border="0" width="800">
+	<tbody>
+		<tr bgcolor="#393939">
+			<td align="center" style="width: 100px; height: 35px;">
+				<img src="http://mdavolos-inside-na03-dw.demandware.net/on/demandware.static/Sites-SiteGenesis-Site/-/default/dw5e431d25/images/logo.png" width="165" padding="5px 5px 5px 5px">
+			</td>
+			
+			<td align="center" style="width: 100px; height: 35px;">
+				<a style="text-decoration: none;" href="http://mdavolos-inside-na03-dw.demandware.net/s/SiteGenesis/womens/" target="blank"><span style="font-family: helvetica, arial, sans-serif; font-size: 13px; color: #ffffff; font-weight:bold;">WOMENS</span></a>
+			</td>
+
+			<td align="center" style="width: 100px;">
+				<a style="text-decoration: none;" href="http://mdavolos-inside-na03-dw.demandware.net/s/SiteGenesis/mens/" target="blank"><span style="font-family: helvetica, arial, sans-serif; font-size: 13px; color: #ffffff; font-weight:bold;">MENS</span></a>
+			</td>
+
+			<td align="center" style="width: 100px;">
+				<a style="text-decoration: none;" href="http://mdavolos-inside-na03-dw.demandware.net/s/SiteGenesis/kids/" target="blank"><span style="font-family: helvetica, arial, sans-serif; font-size: 13px; color: #ffffff; font-weight:bold;">KIDS</span></a>
+			</td>
+
+			<td align="center" style="width: 100px;">
+				<a style="text-decoration: none;" href="http://mdavolos-inside-na03-dw.demandware.net/s/SiteGenesis/gear/" target="blank"><span style="font-family: helvetica, arial, sans-serif; font-size: 13px; color: #ffffff; font-weight:bold;">GEAR</span></a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+	<img alt="" src="https://jlevine-inside-na04-dw.demandware.net/on/demandware.static/-/Sites-ntoretail-Library/default/dw031ddccd/nto-email-hero.jpg?version=1,473,787,897,000" style="border-width: 0px; border-style: solid;" />
+		<div class="clear"><!-- FLOAT CLEAR --></div>
+		<div class="clear"><!-- FLOAT CLEAR --></div>
+		<div class="orderconfirmation" style="padding:20px; font-size: 16px; font-family: helvetica, arial, sans-serif; line-height: 130%;">
+		<div class="thankyoumessage" style=" margin:0 0 25px 0; color:#676767;">
+		<h2 style="color: #03254C; font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif; margin: 5px 0 0 0; font-weight:400; text-transform: capitalize;">Thank you for your order</h2>
+			<br />
+
+		<p style="margin:0;padding:0 0 0 0; color:#444444;">Your order confirmation number is&nbsp;<isprint value="${pdict.Order.orderNo}"/>. (A copy of your order summary is below.)</p>
+			<br />
+		<p style="margin:0;padding:0 0 0 0; color:#444444;">Once your order ships, we'll send you a tracking number so you can check its whereabouts.</p>
+			<br />
+		<p style="margin:0;padding:0 0 0 0; color:#444444;">Your friends at NTO Retail</p>
+
+</divd><!-- END: thankyoumessage -->
+
+<table width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td align="left" style="background:#FFF;padding:20px 0;">
+				<table  style="background:#ffffff;;width:680px;">
+					<tr>
+						<td style="font-size:12px;font-family:arial;padding:20px 10px;vertical-align:top;" colspan="2">
+							<isemailorderdetails order="${pdict.Order}"/>
+						</td>
+					</tr>
+				</table>						
+		</td>
+	</tr>
+</table>	
+					
+
+</body>
+</html>

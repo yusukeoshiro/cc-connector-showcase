@@ -1,0 +1,66 @@
+.breadcrumb {
+	padding: 10px 20px;
+	.pt_account &,
+	.pt_order &,
+	.pt_wish-list &,
+	.pt_gift-registry & {
+		display: none;
+	}
+	li {
+		display: inline;
+		list-style: none;
+	}
+}
+
+.paging-current-page {
+	left: -999em;
+	position: absolute;
+}
+
+.breadcrumb-element {
+	&:after {
+		color: $very-light-gray;
+		content: '/';
+		margin-left: .4em;
+	}
+	&:last-child {
+		font-weight: 700;
+		&:after {
+			content: '';
+		}
+	}
+}
+
+.breadcrumb-refinement {
+	font-weight: 700;
+	&:after {
+		content: attr(data-divider);
+		font-style: normal;
+	}
+	&:last-of-type {
+		&:after {
+			content: '';
+		}
+	}
+}
+
+.breadcrumb-refinement-value {
+	background-color: rgba($blue, 0.3);
+	display: inline-block;
+	border-radius: 3px;
+	margin: 0 .42em .42em 0;
+	padding: 0 .42em;
+}
+
+.breadcrumb-relax {
+	background: none;
+	color: $sangria;
+	font-style: normal;
+	padding: 0 0 0 .4em;
+}
+
+.breadcrumb-result-text a,
+.breadcrumb .searchphraselink {
+	background: none;
+	padding: 0;
+}

@@ -1,0 +1,79 @@
+.banner-hero {
+	position: relative;
+	.banner-content {
+		position: absolute;
+		top: 40%;
+		left: 10%;
+		right: 10%;
+		text-align: center;
+		text-transform: uppercase;
+		color: $white;
+		h2 {
+			font-size: 45px;
+			margin: 0;
+		}
+		p {
+			font-size: 25px;
+			margin: 0 0 10px;
+		}
+		button {
+			font-size: 27px;
+		}
+	}
+}
+.banner-image {
+	width: 100%;
+	vertical-align: bottom;
+}
+.banner-image-bg {
+	display: block;
+	background-position: center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+
+
+.home-categories {
+	background: #000;
+	.category {
+		opacity: 0.8;
+		transition: opacity 0.2s ease-in-out;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	a {
+		display: block;
+		height: 250px;
+		text-align: center;
+		color: $white;
+	}
+	.circle {
+		display: block;
+		position: relative;
+		top: 9%;
+		width: 200px;
+		height: 200px;
+		margin: 0 auto;
+		border-radius: 50%;
+		font-size: 32px;
+		background: rgba(22, 22, 22, 0.4);
+	}
+	.title {
+		position: relative;
+		top: 39%;
+	}
+}
+.home-footer {
+	background-position: top center;
+	background-color: $grey7;
+	height: 700px;
+}
+
+@media screen and (min-width: 768px) {
+	.d-col-25 {
+		width: 25%;
+		float: left;
+	}
+}
